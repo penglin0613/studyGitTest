@@ -10,5 +10,29 @@
 <body>
     <div>哈哈哈</div>
     <p>修改了内容</p>
+
+    <script>
+        var num = 10;
+        var obj = {
+            num:8,
+            inner:{
+                num:6,
+                print:function(){
+                    console.log(num+":"+this.num);
+                }
+            }
+        };
+        num = 888;
+
+        // obj.inner.print();//888 6
+        //var fn = obj.inner.print;
+        // fn(); //888 888
+
+        console.log( (obj.inner.print));
+        // (obj.inner.print)(); //888 6
+
+
+    
+    </script>
 </body>
 </html>
